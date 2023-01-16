@@ -5,10 +5,14 @@ function newElement() {
       alert("Le champs est vide!");
       return;
   }
+  // créer élément li
   let newItem = document.createElement("li");
+  // le texte de mon element li est le inputValue
   let textnode = document.createTextNode(inputValue);
+  // créer bouton  pour que je puisse supprimer mon élément
   let button = document.createElement("button");
   button.innerText = "supprimer";
+  // Mon bouton fais le travail de ma fonction removeElement
   button.onclick = function() {
     removeElement(this);
 }
@@ -17,9 +21,11 @@ newItem.appendChild(button);
 document.getElementById("myUL").appendChild(newItem);
 document.getElementById("myInput").value = "";
 }
+//Ma fonction supprimer qui reprend la fonction native js remove()
 function removeElement(element) {
   element.parentNode.remove();
 }
+// j'ajoute un addEventListener pour marquer le check d'un élément.
 let list = document.querySelector('ul');
 list.addEventListener('click', toggleChecked, false);
 // foncion pour checker les elements
