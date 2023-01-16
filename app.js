@@ -34,3 +34,21 @@ function toggleChecked(event) {
     event.target.classList.toggle('checked');
   }
 }
+
+let icon=document.querySelector('img');
+let icon2=document.querySelector('monImg');
+let body=document.querySelector('body');
+icon.addEventListener("click", function(){
+  body.style.backgroundColor = "black";
+  icon.style.display = "none";
+  icon2.style.display = "block";
+});
+
+icon2.addEventListener("click", function(){
+  body.style.backgroundColor = "white";
+  icon.style.display = "block";
+  icon2.style.display = "none";
+});
+
+
+
