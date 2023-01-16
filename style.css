@@ -69,13 +69,13 @@
   }
   
   .close:hover {
-    background-color: #6BB77B;
+    background-color: #DC143C;
     color:red;
   }
   
   /* Style the header */
   .header {
-    background-color: #6BB77B;
+    background-color: #DC143C;
     padding: 30px 40px;
     color: white;
     text-align: center;
@@ -102,6 +102,24 @@
   }
   
   /* Style the "Add" button */
+  button{
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 12px 24px;
+    border: 0;
+    color: #fff;
+    background: #FF1493;
+    line-height: 1.15;
+    font-size: 16px;
+    margin-left: 30%;
+  }
+  button:hover{
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #000a47;
+  }
   .addBtn {
     display: inline-block;
     outline: none;
