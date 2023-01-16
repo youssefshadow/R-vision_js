@@ -5,9 +5,17 @@ function newElement() {
       alert("Le champs est vide!");
       return;
   }
-  let newItem = "<li>" + inputValue + " <button onclick='removeElement(this)'>supprimer</button></li>";
-  document.getElementById("myUL").innerHTML += newItem;
-  document.getElementById("myInput").value = "";
+  let newItem = document.createElement("li");
+  let textnode = document.createTextNode(inputValue);
+  let button = document.createElement("button");
+  button.innerText = "supprimer";
+  button.onclick = function() {
+    removeElement(this);
+}
+newItem.appendChild(textnode);
+newItem.appendChild(button);
+document.getElementById("myUL").appendChild(newItem);
+document.getElementById("myInput").value = "";
 }
 function removeElement(element) {
   element.parentNode.remove();
