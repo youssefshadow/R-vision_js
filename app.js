@@ -49,9 +49,9 @@ function toggleChecked(event) {
 //   icon.style.display = "block";
 //   icon2.style.display = "none";
 // });
-let icon=document.querySelector('img');
-let icon2=document.querySelector('#monImg'); // changed from 'monImg' to '.monImg' to select by class instead of by tag
 let body=document.querySelector('body');
+let icon=document.querySelector('img');
+let icon2=document.querySelector('#monImg'); 
 icon.addEventListener("click", function(){
   body.style.backgroundColor = "black";
   icon.style.display = "none";

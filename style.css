@@ -70,12 +70,16 @@
   
   .close:hover {
     background-color: #DC143C;
+    background-position: center;
+    
     color:red;
   }
   
   /* Style the header */
   .header {
-    background-color: #CD5C5C;
+    background-image: url(bg.jpg);
+    background-position: center;
+    background-size: cover;
     padding: 30px 40px;
     color: white;
     text-align: center;
