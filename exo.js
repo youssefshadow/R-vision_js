@@ -29,25 +29,16 @@
 
 
   //tp à rendre 
-  // Récupérer les éléments de lien
 const ajoutLien = document.getElementById("ajoutLien");
 const removeLink = document.getElementById("removeLink");
 const toggleLink = document.getElementById("toggleLink");
-
-// Récupérer l'élément de titre
 const title = document.getElementById("title");
-
-// Ajouter la classe maCouleur au titre lorsque le lien Ajouter est cliqué
 ajoutLien.addEventListener("click", function() {
   title.classList.add("maCouleur");
 });
-
-// Supprimer la classe maCouleur du titre lorsque le lien Supprimer est cliqué
 removeLink.addEventListener("click", function() {
   title.classList.remove("maCouleur");
 });
-
-// Toggle la classe maCouleur du titre lorsque le lien Toggle est cliqué
 toggleLink.addEventListener("click", function() {
   title.classList.toggle("maCouleur");
 });

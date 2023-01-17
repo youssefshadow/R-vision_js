@@ -35,8 +35,22 @@ function toggleChecked(event) {
   }
 }
 
+// let icon=document.querySelector('img');
+// let icon2=document.querySelector('monImg');
+// let body=document.querySelector('body');
+// icon.addEventListener("click", function(){
+//   body.style.backgroundColor = "black";
+//   icon.style.display = "none";
+//   icon2.style.display = "block";
+// });
+
+// icon2.addEventListener("click", function(){
+//   body.style.backgroundColor = "blue";
+//   icon.style.display = "block";
+//   icon2.style.display = "none";
+// });
 let icon=document.querySelector('img');
-let icon2=document.querySelector('monImg');
+let icon2=document.querySelector('#monImg'); // changed from 'monImg' to '.monImg' to select by class instead of by tag
 let body=document.querySelector('body');
 icon.addEventListener("click", function(){
   body.style.backgroundColor = "black";
@@ -49,6 +63,8 @@ icon2.addEventListener("click", function(){
   icon.style.display = "block";
   icon2.style.display = "none";
 });
+
+
 
 
 
