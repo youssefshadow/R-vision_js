@@ -10,20 +10,22 @@
 // TODO 4-1: Tjrs dans la F =>,au InnerHTML de counter, assigner la value dans dataTransformed
 // TODO 4-2: remmettre le filter de counter en "blur(0)"
 // TODO 5: on éxecute notre fonction majCounter quelquepart dans notre programme
-
-//let liste = document.querySelector("p");
-// const pokeball = async () => {
-//     try {
-//         let response = await fetch("https://pokeapi.co/api/v2/pokemon");
-//         let data = await response.json();
-//         console.log(data);
-//         liste.innerText = data.value;
-        
-//     } catch (error) {
-//         console.error(error);
-//     }
-// }
-// pokeball();
+// version de jeff 
+//** METHODE avec Fetch + async Await */
+const counter = document.getElementById('counter');
+//de base une ƒ° => est anonyme, astuce pour désanonymiser, on la stocke dans une variable
+const majCounter = async () => {
+    //Data va récup Toutes les données de l'api
+    const data = await fetch('https://api.countapi.xyz/hit/sltcava/visites');
+    console.log(data);
+    //Plutot que de Travailler sur la réponse, on va la transformé pour 
+    //qu'elle deviennt un OBJET JS (+ pratique)
+    const dataTransformed = await data.json();
+    console.log(dataTransformed);
+    counter.innerText = dataTransformed.value;
+    counter.style.filter = 'blur(0)';
+};
+majCounter();
 
 const pokeball = async () => {
     try {
