@@ -11,19 +11,42 @@
 // TODO 4-2: remmettre le filter de counter en "blur(0)"
 // TODO 5: on éxecute notre fonction majCounter quelquepart dans notre programme
 
-const counter = document.querySelector("h2");
-const majCounter = async () => {
+//let liste = document.querySelector("p");
+// const pokeball = async () => {
+//     try {
+//         let response = await fetch("https://pokeapi.co/api/v2/pokemon");
+//         let data = await response.json();
+//         console.log(data);
+//         liste.innerText = data.value;
+        
+//     } catch (error) {
+//         console.error(error);
+//     }
+// }
+// pokeball();
+
+const pokeball = async () => {
     try {
-        let response = await fetch("https://api.countapi.xyz/hit/sltcava/visites");
+        let response = await fetch("https://pokeapi.co/api/v2/pokemon");
         let data = await response.json();
-        console.log(data);
-        counter.innerText = data.value;
-        counter.style.filter = "blur(0)";
+        let pokemonList = data.results;
+        let listContainer = document.querySelector("#pokemon-list");
+        let listHTML = "";
+        for(let i = 0; i < pokemonList.length; i++) {
+            listHTML += `<li>${pokemonList[i].name}</li>`;
+        }
+        listContainer.innerHTML = listHTML;
     } catch (error) {
         console.error(error);
+        let listContainer = document.querySelector("#pokemon-list");
+        listContainer.innerHTML = "Un problème.......";
     }
 }
-majCounter();
+pokeball();
+
+
+
+
 
 
 
